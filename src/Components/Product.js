@@ -3,7 +3,7 @@ import { faHeart, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 export default function Product({
   productName = "Product Name",
   productPrice = "0",
-  image = `Mens Shoes/Black/MensBlack1.jpg`,
+  image = "Mens_Shoes/Black/MensBlack1.jpg",
 }) {
   return (
     <div className="product">

@@ -29,7 +29,7 @@ export default function CardBanner() {
             image={Promo3}
             icon={faPersonHiking}
             promoText="Train Elevate Achieve"
-            promoLink="Hiking"
+            promoLink="Endurance"
           />
         </div>
       </div>

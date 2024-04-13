@@ -4,7 +4,7 @@
   --primary-background-color: #ffffe7;
   --primary-text-color: #414d33;
   --secondary-background-color: #ffffcc;
-  --bold-font-color: #1a1f14;
+  --bold-font-color: rgb(50, 58, 39);
 }
 
 body {
@@ -197,9 +197,9 @@ code {
   min-width: 30em;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1em;
-  align-items: center;
 }
 
 .product {
@@ -210,11 +210,12 @@ code {
   margin: 1em;
   background-color: white;
   border-radius: 0.5em;
-  transition: box-shadow 300ms;
+  transition: box-shadow 300ms, color 300ms;
 }
 
 .product:hover {
   box-shadow: 0.5em 0.5em 1.5em 0.2em #a3a38479;
+  color: var(--bold-font-color);
 }
 
 .product > .img-container {
@@ -262,11 +263,7 @@ code {
   margin: 0.25em;
 }
 
-.product-buttons {
-  transition: color 300ms;
-}
-
 .product-buttons:hover {
-  color: black;
+  color: var(--primary-text-color);
   cursor: pointer;
 }

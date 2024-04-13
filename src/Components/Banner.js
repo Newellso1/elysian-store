@@ -7,9 +7,9 @@ export default function Banner() {
     <div>
       <ParallaxBanner
         layers={[
-          { image: Background, speed: -12 },
+          { image: Background, speed: -20 },
           {
-            speed: -10,
+            speed: -15,
             children: (
               <div className="banner-child">
                 <img src={LogoWhite} alt="Logo" />

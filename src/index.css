@@ -14,11 +14,16 @@ body {
   font-family: Open Sans;
   color: var(--primary-text-color);
   letter-spacing: 0.02em;
+  background-color: var(--primary-background-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  overflow-x: hidden;
 }
 
 .promotional-message {
@@ -75,7 +80,7 @@ code {
 
 .parallax-banner {
   max-width: 100%;
-  height: 25em;
+  height: 40em;
   aspect-ratio: calc();
 }
 
@@ -89,8 +94,55 @@ code {
 }
 
 .banner-child > img {
-  width: 30em;
+  max-width: 30em;
   opacity: 0.9;
   box-shadow: 0 0 5em 1em #11140d;
   padding: 1em;
+}
+.card-banner {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.card-banner > .card-container {
+  padding: 1px;
+  display: flex;
+  justify-content: space-around;
+  width: 80vw;
+}
+
+.card > .image-container {
+  max-width: 30em;
+  overflow: hidden;
+}
+
+.card > .image-container > img {
+  transition: scale 300ms;
+  scale: 1.05;
+}
+
+.card:hover > .image-container > img {
+  scale: 1.2;
+  max-height: 100%;
+}
+
+.card > .promotional-info > a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card > .promotional-info > a::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: var(--primary-text-color);
+  display: block;
+  position: relative;
+  transition: width 300ms;
+}
+
+.card:hover > .promotional-info > a::after {
+  width: 100%;
 }

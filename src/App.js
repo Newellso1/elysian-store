@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import PromotionalHeader from "./Components/PromotionalHeader";
 import Banner from "./Components/Banner";
 import { ParallaxProvider } from "react-scroll-parallax";
+import CardBanner from "./Components/CardBanner";
 
 function App() {
   const [hidePromo, setHidePromo] = useState(true);
@@ -15,6 +16,7 @@ function App() {
       )}
       <Header />
       <Banner />
+      <CardBanner />
     </div>
   );
 }

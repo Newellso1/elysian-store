@@ -1,10 +1,23 @@
-export default function Product() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+export default function Product({
+  productName = "Product Name",
+  productPrice = "0",
+  image = `Mens Shoes/Black/MensBlack1.jpg`,
+}) {
   return (
     <div className="product">
-      <img
-        src={require("src/Assets/Images/MensShoes/Black/MensBlack1.jpg")}
-        alt="Product Name"
-      />
+      <div className="img-container">
+        <img src={require(`../Assets/Images/${image}`)} alt="Product Name" />
+      </div>
+      <div>
+        <h3>{productName}</h3>
+        <h4>${productPrice}</h4>
+      </div>
+      <div>
+        <FontAwesomeIcon icon={faHeart} className="product-buttons" />
+        <FontAwesomeIcon icon={faPlusCircle} className="product-buttons" />
+      </div>
     </div>
   );
 }

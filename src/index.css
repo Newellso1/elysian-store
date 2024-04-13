@@ -186,6 +186,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2em 0;
 }
 
 .store > .container {
@@ -196,6 +197,76 @@ code {
   min-width: 30em;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1em;
   align-items: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 17em;
+  box-shadow: 0.5em 0.5em 1.5em #a3a3845b;
+  margin: 1em;
+  background-color: white;
+  border-radius: 0.5em;
+  transition: box-shadow 300ms;
+}
+
+.product:hover {
+  box-shadow: 0.5em 0.5em 1.5em 0.2em #a3a38479;
+}
+
+.product > .img-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+
+.product > .img-container > img {
+  width: 100%;
+  scale: 1.1;
+  transition: scale 300ms;
+  overflow: hidden;
+}
+
+.product:hover > .img-container > img {
+  scale: 1.2;
+}
+
+.product h3 {
+  font-family: Yrsa;
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0.25em 0;
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+
+.product h4 {
+  font-size: 1.25em;
+  margin: 0.25em 0;
+}
+
+.product > div:nth-child(2) {
+  margin-left: 0.25em;
+}
+
+.product > div:nth-child(3) {
+  place-self: flex-end;
+  font-size: 1.5em;
+  display: flex;
+  width: 4em;
+  gap: 0.5em;
+  justify-content: flex-end;
+  margin: 0.25em;
+}
+
+.product-buttons {
+  transition: color 300ms;
+}
+
+.product-buttons:hover {
+  color: black;
+  cursor: pointer;
 }

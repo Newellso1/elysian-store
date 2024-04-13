@@ -24,6 +24,8 @@ code {
 
 .App {
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .promotional-message {
@@ -86,7 +88,7 @@ code {
 
 .banner-child {
   width: 100%;
-  height: 90%;
+  min-height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,32 +96,50 @@ code {
 }
 
 .banner-child > img {
-  max-width: 30em;
+  max-width: 35em;
   opacity: 0.9;
   box-shadow: 0 0 5em 1em #11140d;
   padding: 1em;
+  margin-top: 4em;
 }
 .card-banner {
+  place-self: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 2em;
+  width: 100vw;
+  min-height: 100%;
+  background-color: var(--secondary-background-color);
 }
 
-.card-banner > .card-container {
+.card-banner > .container {
+  background-color: white;
+  box-shadow: inset 0 0 5em 1em #e2e2ba94;
+  border-radius: 0.5em;
+  width: 80%;
+  min-width: 30em;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.card-banner > .container > .card-container {
   padding: 1px;
   display: flex;
   justify-content: space-around;
-  width: 80vw;
+  padding: 1em;
 }
 
 .card > .image-container {
   max-width: 30em;
   overflow: hidden;
+  border-radius: 0.5em;
 }
 
 .card > .image-container > img {
   transition: scale 300ms;
   scale: 1.05;
+  filter: drop-shadow(0 0 1em black);
 }
 
 .card:hover > .image-container > img {
@@ -130,19 +150,52 @@ code {
 .card > .promotional-info > a {
   color: var(--primary-text-color);
   text-decoration: none;
-  font-weight: 600;
+  text-transform: lowercase;
 }
 
 .card > .promotional-info > a::after {
   content: "";
-  height: 2px;
+  height: 1px;
   width: 0%;
   background-color: var(--primary-text-color);
   display: block;
   position: relative;
   transition: width 300ms;
+  margin-top: 2px;
 }
 
 .card:hover > .promotional-info > a::after {
   width: 100%;
+}
+
+.card > .promotional-info > h2 {
+  font-family: Yrsa;
+  text-transform: lowercase;
+  font-weight: 200;
+  font-size: 1.75em;
+}
+
+.card > .promotional-info > h2 > span {
+  margin-left: 0.35em;
+  font-size: 0.75em;
+  position: relative;
+  top: 0.05em;
+}
+
+.store {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.store > .container {
+  background-color: white;
+  box-shadow: inset 0 0 5em 1em #e2e2ba94;
+  border-radius: 0.5em;
+  width: 80%;
+  min-width: 30em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
 }

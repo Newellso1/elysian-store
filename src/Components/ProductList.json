@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Flex",
+    "color": "black",
+    "price": 50,
+    "image": "src/Assets/Images/Mens shoes/Black/MensBlack1.jpg",
+    "gender": "male",
+    "popularity": 10
+  },
+  {
+    "name": "Agile",
+    "color": "black",
+    "price": 40,
+    "image": "src/Assets/Images/Mens shoes/Black/MensBlack2.jpg",
+    "gender": "male",
+    "popularity": 4
+  },
+  {
+    "name": "Apex",
+    "color": "black",
+    "price": 55,
+    "image": "src/Assets/Images/Mens shoes/Black/MensBlack3.jpg",
+    "gender": "male",
+    "popularity": 3
+  },
+  {
+    "name": "Glide",
+    "color": "blue",
+    "price": 46,
+    "image": "src/Assets/Images/Mens shoes/Blue/MensBlue1.jpg",
+    "gender": "male",
+    "popularity": 6
+  },
+  {
+    "name": "Stride",
+    "color": "blue",
+    "price": 36,
+    "image": "src/Assets/Images/Mens shoes/Blue/MensBlue2.jpg",
+    "gender": "male",
+    "popularity": 9
+  },
+  {
+    "name": "Sonic",
+    "color": "blue",
+    "price": 42,
+    "image": "src/Assets/Images/Mens shoes/Blue/MensBlue3.jpg",
+    "gender": "male",
+    "popularity": 2
+  },
+  {
+    "name": "Enigma",
+    "color": "green",
+    "price": 32,
+    "image": "src/Assets/Images/Mens shoes/Green/MensGreen1.jpg",
+    "gender": "male",
+    "popularity": 10
+  },
+  {
+    "name": "Zephyr",
+    "color": "green",
+    "price": 60,
+    "image": "src/Assets/Images/Mens shoes/Green/MensGreen2.jpg",
+    "gender": "male",
+    "popularity": 4
+  },
+  {
+    "name": "Rally",
+    "color": "green",
+    "price": 50,
+    "image": "src/Assets/Images/Mens shoes/Green/MensGreen3.jpg",
+    "gender": "male",
+    "popularity": 8
+  },
+  {
+    "name": "Inferno",
+    "color": "red",
+    "price": 38,
+    "image": "src/Assets/Images/Mens shoes/Red/MensRed1.jpg",
+    "gender": "male",
+    "popularity": 9
+  },
+  {
+    "name": "Phoenix",
+    "color": "red",
+    "price": 62,
+    "image": "src/Assets/Images/Mens shoes/Red/MensRed2.jpg",
+    "gender": "male",
+    "popularity": 0
+  },
+  {
+    "name": "Crimson",
+    "color": "red",
+    "price": 59,
+    "image": "src/Assets/Images/Mens shoes/Red/MensRed3.jpg",
+    "gender": "male",
+    "popularity": 3
+  },
+  {
+    "name": "Nimbus",
+    "color": "white",
+    "price": 37,
+    "image": "src/Assets/Images/Mens shoes/White/MensWhite1.jpg",
+    "gender": "male",
+    "popularity": 9
+  },
+  {
+    "name": "Zenith",
+    "color": "white",
+    "price": 40,
+    "image": "src/Assets/Images/Mens shoes/White/MensWhite2.jpg",
+    "gender": "male",
+    "popularity": 8
+  },
+  {
+    "name": "Blanc",
+    "color": "white",
+    "price": 20,
+    "image": "src/Assets/Images/Mens shoes/White/MensWhite3.jpg",
+    "gender": "male",
+    "popularity": 10
+  }
+]

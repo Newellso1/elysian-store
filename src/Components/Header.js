@@ -14,7 +14,7 @@ export default function Header() {
       </div>
       <div className="header-middle">
         <ul>
-          <li>About Us</li>
+          <li>Store</li>
           <li>Men</li>
           <li>Women</li>
         </ul>

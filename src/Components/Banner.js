@@ -9,7 +9,7 @@ export default function Banner() {
         layers={[
           { image: Background, speed: -20 },
           {
-            speed: -15,
+            speed: 5,
             children: (
               <div className="banner-child">
                 <img src={LogoWhite} alt="Logo" />

@@ -1,6 +1,9 @@
+import React from "react";
 import { useState } from "react";
 import Header from "./Components/Header";
 import PromotionalHeader from "./Components/PromotionalHeader";
+import Banner from "./Components/Banner";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   const [hidePromo, setHidePromo] = useState(true);
@@ -10,10 +13,18 @@ function App() {
       {hidePromo && (
         <PromotionalHeader hidePromo={hidePromo} setHidePromo={setHidePromo} />
       )}
-
       <Header />
+      <Banner />
     </div>
   );
 }
 
-export default App;
+function Root() {
+  return (
+    <ParallaxProvider>
+      <App />
+    </ParallaxProvider>
+  );
+}
+
+export default Root;

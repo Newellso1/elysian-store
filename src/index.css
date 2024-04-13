@@ -72,3 +72,25 @@ code {
 .header li {
   cursor: pointer;
 }
+
+.parallax-banner {
+  max-width: 100%;
+  height: 25em;
+  aspect-ratio: calc();
+}
+
+.banner-child {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.banner-child > img {
+  width: 30em;
+  opacity: 0.9;
+  box-shadow: 0 0 5em 1em #11140d;
+  padding: 1em;
+}

@@ -4,6 +4,7 @@
   --primary-background-color: #ffffe7;
   --primary-text-color: #414d33;
   --secondary-background-color: #ffffcc;
+  --bold-font-color: #1a1f14;
 }
 
 body {
@@ -24,9 +25,18 @@ code {
   text-align: center;
   height: 2.5em;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--secondary-background-color);
+  padding: 0 1em;
+}
+
+.promotional-message > p {
+  flex: 1;
+}
+
+.promotional-message > div {
+  color: var(--bold-font-color);
 }
 
 .promotional-message > p > span {

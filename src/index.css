@@ -8,6 +8,8 @@
 }
 
 body {
+  overflow-x: hidden;
+  width: 100vw;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -23,7 +25,7 @@ code {
 }
 
 .App {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   display: flex;
   flex-direction: column;
 }
@@ -57,6 +59,9 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .header > .header-left > h1 {
@@ -184,9 +189,11 @@ code {
 
 .store {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2em 0;
+  position: relative;
 }
 
 .store > .container {
@@ -266,4 +273,25 @@ code {
 .product-buttons:hover {
   color: var(--primary-text-color);
   cursor: pointer;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bold-font-color);
+  border-radius: 2em;
+  color: white;
+  position: sticky;
+  height: 2.5em;
+  width: 2.5em;
+  margin-left: 2em;
+  top: 8em;
+  justify-self: flex-start;
+  align-self: flex-start;
+  z-index: 20;
+}
+
+.store-filter > :nth-child(1) {
+  color: var(--primary-background-color);
 }

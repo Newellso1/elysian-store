@@ -19,7 +19,7 @@ export default function Card({
             <FontAwesomeIcon icon={icon} />
           </span>
         </h2>
-        <a href="" target="blank">
+        <a href="www.google.com" target="blank">
           {promoLink}
         </a>
       </div>

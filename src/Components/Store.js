@@ -7,13 +7,9 @@ export default function Store() {
   const [openStoreFilter, setOpenStoreFilter] = useState(false);
   const openFilterStyle = {
     width: openStoreFilter ? "100vw" : "",
-    height: openStoreFilter ? "30em" : "",
     marginLeft: openStoreFilter ? "0" : "",
-    position: openStoreFilter ? "" : "",
-    top: openStoreFilter ? "6.4em" : "",
+    // top: openStoreFilter ? "6.4em" : "",
   };
-
-  const randomProductList = ProductList.sort(() => Math.random() - 0.5);
 
   return (
     <div className="store">
@@ -28,7 +24,7 @@ export default function Store() {
         />
       </div>
       <div className="container">
-        {randomProductList.map((product, index) => (
+        {ProductList.map((product, index) => (
           <Product
             key={index}
             productName={product.name}

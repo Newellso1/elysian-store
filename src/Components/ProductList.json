@@ -1,25 +1,17 @@
 [
   {
-    "name": "Flex",
-    "color": "black",
-    "price": 50,
-    "image": "Mens_Shoes/Black/MensBlack1.jpg",
+    "name": "Nimbus",
+    "color": "white",
+    "price": 37,
+    "image": "Mens_Shoes/White/MensWhite1.jpg",
     "gender": "male",
-    "popularity": 10
+    "popularity": 9
   },
   {
-    "name": "Agile",
-    "color": "black",
-    "price": 40,
-    "image": "Mens_Shoes/Black/MensBlack2.jpg",
-    "gender": "male",
-    "popularity": 4
-  },
-  {
-    "name": "Apex",
-    "color": "black",
-    "price": 55,
-    "image": "Mens_Shoes/Black/MensBlack3.jpg",
+    "name": "Crimson",
+    "color": "red",
+    "price": 59,
+    "image": "Mens_Shoes/Red/MensRed3.jpg",
     "gender": "male",
     "popularity": 3
   },
@@ -32,100 +24,12 @@
     "popularity": 6
   },
   {
-    "name": "Stride",
-    "color": "blue",
-    "price": 36,
-    "image": "Mens_Shoes/Blue/MensBlue2.jpg",
-    "gender": "male",
-    "popularity": 9
-  },
-  {
-    "name": "Sonic",
-    "color": "blue",
-    "price": 42,
-    "image": "Mens_Shoes/Blue/MensBlue3.jpg",
-    "gender": "male",
-    "popularity": 2
-  },
-  {
-    "name": "Enigma",
-    "color": "green",
-    "price": 32,
-    "image": "Mens_Shoes/Green/MensGreen1.jpg",
-    "gender": "male",
-    "popularity": 10
-  },
-  {
-    "name": "Zephyr",
-    "color": "green",
-    "price": 60,
-    "image": "Mens_Shoes/Green/MensGreen2.jpg",
-    "gender": "male",
-    "popularity": 4
-  },
-  {
-    "name": "Rally",
-    "color": "green",
-    "price": 50,
-    "image": "Mens_Shoes/Green/MensGreen3.jpg",
-    "gender": "male",
-    "popularity": 8
-  },
-  {
-    "name": "Inferno",
-    "color": "red",
-    "price": 38,
-    "image": "Mens_Shoes/Red/MensRed1.jpg",
-    "gender": "male",
-    "popularity": 9
-  },
-  {
-    "name": "Phoenix",
-    "color": "red",
-    "price": 62,
-    "image": "Mens_Shoes/Red/MensRed2.jpg",
-    "gender": "male",
-    "popularity": 0
-  },
-  {
-    "name": "Crimson",
-    "color": "red",
-    "price": 59,
-    "image": "Mens_Shoes/Red/MensRed3.jpg",
-    "gender": "male",
-    "popularity": 3
-  },
-  {
-    "name": "Nimbus",
-    "color": "white",
-    "price": 37,
-    "image": "Mens_Shoes/White/MensWhite1.jpg",
-    "gender": "male",
-    "popularity": 9
-  },
-  {
     "name": "Zenith",
     "color": "white",
     "price": 40,
     "image": "Mens_Shoes/White/MensWhite2.jpg",
     "gender": "male",
     "popularity": 8
-  },
-  {
-    "name": "Blanc",
-    "color": "white",
-    "price": 20,
-    "image": "Mens_Shoes/White/MensWhite3.jpg",
-    "gender": "male",
-    "popularity": 10
-  },
-  {
-    "name": "Stealth",
-    "color": "black",
-    "price": 32,
-    "image": "Womens_Shoes/Black/WomansBlack1.jpg",
-    "gender": "female",
-    "popularity": 3
   },
   {
     "name": "Jet",
@@ -144,12 +48,52 @@
     "popularity": 8
   },
   {
-    "name": "Aegean",
-    "color": "blue",
-    "price": 31,
-    "image": "Womens_Shoes/Blue/WomansBlue1.jpg",
+    "name": "Sakura",
+    "color": "pink",
+    "price": 43,
+    "image": "Womens_Shoes/Pink/WomansPink1.jpg",
     "gender": "female",
-    "popularity": 2
+    "popularity": 7
+  },
+  {
+    "name": "Agile",
+    "color": "black",
+    "price": 40,
+    "image": "Mens_Shoes/Black/MensBlack2.jpg",
+    "gender": "male",
+    "popularity": 4
+  },
+  {
+    "name": "Inferno",
+    "color": "red",
+    "price": 38,
+    "image": "Mens_Shoes/Red/MensRed1.jpg",
+    "gender": "male",
+    "popularity": 9
+  },
+  {
+    "name": "Stealth",
+    "color": "black",
+    "price": 32,
+    "image": "Womens_Shoes/Black/WomansBlack1.jpg",
+    "gender": "female",
+    "popularity": 3
+  },
+  {
+    "name": "Rally",
+    "color": "green",
+    "price": 50,
+    "image": "Mens_Shoes/Green/MensGreen3.jpg",
+    "gender": "male",
+    "popularity": 8
+  },
+  {
+    "name": "Tuscany",
+    "color": "yellow",
+    "price": 21,
+    "image": "Womens_Shoes/Yellow/WomansYellow3.jpg",
+    "gender": "female",
+    "popularity": 3
   },
   {
     "name": "Ultramarine",
@@ -160,58 +104,74 @@
     "popularity": 10
   },
   {
-    "name": "Raven",
-    "color": "blue",
-    "price": 25,
-    "image": "Womens_Shoes/Blue/WomansBlue3.jpg",
-    "gender": "female",
+    "name": "Zephyr",
+    "color": "green",
+    "price": 60,
+    "image": "Mens_Shoes/Green/MensGreen2.jpg",
+    "gender": "male",
     "popularity": 4
   },
   {
-    "name": "Sakura",
-    "color": "pink",
-    "price": 43,
-    "image": "Womens_Shoes/Pink/WomansPink1.jpg",
-    "gender": "female",
-    "popularity": 7
+    "name": "Phoenix",
+    "color": "red",
+    "price": 62,
+    "image": "Mens_Shoes/Red/MensRed2.jpg",
+    "gender": "male",
+    "popularity": 0
   },
   {
-    "name": "Azalea",
-    "color": "pink",
-    "price": 52,
-    "image": "Womens_Shoes/Pink/WomansPink2.jpg",
-    "gender": "female",
-    "popularity": 9
-  },
-  {
-    "name": "Peony",
-    "color": "pink",
-    "price": 37,
-    "image": "Womens_Shoes/Pink/WomansPink3.jpg",
-    "gender": "female",
-    "popularity": 10
-  },
-  {
-    "name": "Glacier",
-    "color": "white",
+    "name": "Apex",
+    "color": "black",
     "price": 55,
-    "image": "Womens_Shoes/White/WomansWhite1.jpg",
-    "gender": "female",
-    "popularity": 7
+    "image": "Mens_Shoes/Black/MensBlack3.jpg",
+    "gender": "male",
+    "popularity": 3
   },
   {
-    "name": "Moonlight",
-    "color": "white",
-    "price": 52,
-    "image": "Womens_Shoes/White/WomansWhite2.jpg",
+    "name": "Sonic",
+    "color": "blue",
+    "price": 42,
+    "image": "Mens_Shoes/Blue/MensBlue3.jpg",
+    "gender": "male",
+    "popularity": 2
+  },
+  {
+    "name": "Aegean",
+    "color": "blue",
+    "price": 31,
+    "image": "Womens_Shoes/Blue/WomansBlue1.jpg",
     "gender": "female",
-    "popularity": 9
+    "popularity": 2
+  },
+  {
+    "name": "Flex",
+    "color": "black",
+    "price": 50,
+    "image": "Mens_Shoes/Black/MensBlack1.jpg",
+    "gender": "male",
+    "popularity": 10
   },
   {
     "name": "Blanc",
     "color": "white",
     "price": 21,
     "image": "Womens_Shoes/White/WomansWhite3.jpg",
+    "gender": "female",
+    "popularity": 10
+  },
+  {
+    "name": "Blanc",
+    "color": "white",
+    "price": 20,
+    "image": "Mens_Shoes/White/MensWhite3.jpg",
+    "gender": "male",
+    "popularity": 10
+  },
+  {
+    "name": "Peony",
+    "color": "pink",
+    "price": 37,
+    "image": "Womens_Shoes/Pink/WomansPink3.jpg",
     "gender": "female",
     "popularity": 10
   },
@@ -224,6 +184,22 @@
     "popularity": 10
   },
   {
+    "name": "Moonlight",
+    "color": "white",
+    "price": 52,
+    "image": "Womens_Shoes/White/WomansWhite2.jpg",
+    "gender": "female",
+    "popularity": 9
+  },
+  {
+    "name": "Raven",
+    "color": "blue",
+    "price": 25,
+    "image": "Womens_Shoes/Blue/WomansBlue3.jpg",
+    "gender": "female",
+    "popularity": 4
+  },
+  {
     "name": "Lemon",
     "color": "yellow",
     "price": 52,
@@ -232,11 +208,19 @@
     "popularity": 5
   },
   {
-    "name": "Tuscany",
-    "color": "yellow",
-    "price": 21,
-    "image": "Womens_Shoes/Yellow/WomansYellow3.jpg",
+    "name": "Blanc",
+    "color": "red",
+    "price": 20,
+    "image": "Mens_Shoes/Red/MensRed1.jpg",
+    "gender": "male",
+    "popularity": 10
+  },
+  {
+    "name": "Glacier",
+    "color": "white",
+    "price": 55,
+    "image": "Womens_Shoes/White/WomansWhite1.jpg",
     "gender": "female",
-    "popularity": 3
+    "popularity": 7
   }
 ]

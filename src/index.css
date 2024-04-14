@@ -7,6 +7,12 @@
   --bold-font-color: rgb(50, 58, 39);
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   overflow-x: hidden;
   width: 100vw;
@@ -19,6 +25,10 @@ body {
   background-color: var(--primary-background-color);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -28,6 +38,12 @@ code {
   /* overflow-x: hidden; */
   display: flex;
   flex-direction: column;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.App::-webkit-scrollbar {
+  display: none;
 }
 
 .promotional-message {
@@ -56,6 +72,7 @@ code {
 .header {
   background-color: var(--primary-background-color);
   padding: 0 1em;
+  height: 6.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -285,12 +302,37 @@ code {
   height: 2.5em;
   width: 2.5em;
   margin-left: 2em;
-  top: 8em;
+  top: 6.5em;
   justify-self: flex-start;
   align-self: flex-start;
   z-index: 20;
+  transition: all 100ms;
 }
 
 .store-filter > :nth-child(1) {
   color: var(--primary-background-color);
+}
+
+.filter-button-open {
+  justify-self: start;
+  align-self: flex-end;
+  position: absolute;
+  left: 0.75em;
+  bottom: 0.58em;
+  transition: all 300ms;
+}
+
+.fa-button {
+  position: relative;
+  transition: position;
+  /* animation: hide-button 350ms; */
+}
+
+@keyframes hide-button {
+  0% {
+    display: none;
+  }
+  100% {
+    display: none;
+  }
 }

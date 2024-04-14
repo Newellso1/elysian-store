@@ -16,7 +16,7 @@ export default function Header() {
         <ul>
           <li>Store</li>
           <li>Men</li>
-          <li>Women</li>
+          <li>Woman</li>
         </ul>
       </div>
       <div className="header-right">

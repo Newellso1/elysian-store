@@ -5,11 +5,22 @@ import {
   faVenus,
   faArrowUpWideShort,
   faArrowDownShortWide,
+  faTrashCan,
 } from "@fortawesome/free-solid-svg-icons";
-export default function StoreFilter({ openStoreFilter, setOpenStoreFilter }) {
+export default function StoreFilter({
+  openStoreFilter,
+  setOpenStoreFilter,
+  currentList,
+  setCurrentList,
+  mensShoes,
+  womenShoes,
+  ProductList,
+}) {
   const hideButton = {
     animation: openStoreFilter ? "" : "hide-button 50ms",
   };
+
+  const handleReset = () => setCurrentList(ProductList);
 
   return (
     <div className="store-filter">
@@ -26,10 +37,16 @@ export default function StoreFilter({ openStoreFilter, setOpenStoreFilter }) {
       {openStoreFilter && (
         <div className="filter-options">
           <div className="gender-options">
-            <div className="button gender-button">
+            <div
+              className="button gender-button"
+              onClick={() => setCurrentList(mensShoes)}
+            >
               <FontAwesomeIcon icon={faMars} />
             </div>
-            <div className="button gender-button">
+            <div
+              className="button gender-button"
+              onClick={() => setCurrentList(womenShoes)}
+            >
               {" "}
               <FontAwesomeIcon icon={faVenus} />
             </div>
@@ -55,6 +72,11 @@ export default function StoreFilter({ openStoreFilter, setOpenStoreFilter }) {
                 icon={faArrowDownShortWide}
                 className="sort-icon"
               />
+            </div>
+          </div>
+          <div>
+            <div className="button sort-button" onClick={handleReset}>
+              <FontAwesomeIcon icon={faTrashCan} className="sort-icon" />
             </div>
           </div>
         </div>

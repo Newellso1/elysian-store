@@ -5,11 +5,19 @@ import { useState } from "react";
 
 export default function Store() {
   const [openStoreFilter, setOpenStoreFilter] = useState(false);
+  const [currentList, setCurrentList] = useState(ProductList);
+
   const openFilterStyle = {
     width: openStoreFilter ? "100vw" : "",
     marginLeft: openStoreFilter ? "0" : "",
     // top: openStoreFilter ? "6.4em" : "",
   };
+
+  const mensShoes = ProductList.filter((product) => product.gender === "male");
+
+  const womensShoes = ProductList.filter(
+    (product) => product.gender === "female"
+  );
 
   return (
     <div className="store">
@@ -21,10 +29,15 @@ export default function Store() {
         <StoreFilter
           openStoreFilter={openStoreFilter}
           setOpenStoreFilter={setOpenStoreFilter}
+          currentList={currentList}
+          setCurrentList={setCurrentList}
+          mensShoes={mensShoes}
+          womenShoes={womensShoes}
+          ProductList={ProductList}
         />
       </div>
       <div className="container">
-        {ProductList.map((product, index) => (
+        {currentList.map((product, index) => (
           <Product
             key={index}
             productName={product.name}

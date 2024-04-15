@@ -325,6 +325,7 @@ code {
 .fa-button {
   position: relative;
   transition: position;
+  cursor: pointer;
   /* animation: hide-button 350ms; */
 }
 
@@ -340,7 +341,8 @@ code {
 .filter-options,
 .gender-options,
 .color-options,
-.sort-options {
+.sort-options,
+.reset-option {
   display: flex;
 }
 
@@ -355,6 +357,7 @@ code {
 }
 
 .button {
+  display: flex;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -380,6 +383,16 @@ code {
 }
 
 .color-options > div {
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 1.25em;
+  border: 0.15em solid var(--primary-background-color);
+}
+
+.reset-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1.75em;
   height: 1.75em;
   border-radius: 1.25em;

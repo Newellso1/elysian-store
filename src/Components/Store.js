@@ -16,7 +16,7 @@ export default function Store() {
       <div
         className="filter-container"
         style={openFilterStyle}
-        onClick={() => setOpenStoreFilter(!openStoreFilter)}
+        // onClick={() => setOpenStoreFilter(true)}
       >
         <StoreFilter
           openStoreFilter={openStoreFilter}

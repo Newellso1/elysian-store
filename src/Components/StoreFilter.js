@@ -12,8 +12,7 @@ export default function StoreFilter({
   setOpenStoreFilter,
   currentList,
   setCurrentList,
-  mensShoes,
-  womenShoes,
+  setGenderFilter,
   ProductList,
   colorFilter,
   setColorFilter,
@@ -29,6 +28,8 @@ export default function StoreFilter({
     setColorFilter(null);
     setSortByPrice(null);
   };
+
+  const handleGenderChange = (gender) => setGenderFilter(gender);
 
   const handleColorChange = (color) => setColorFilter(color);
 
@@ -51,13 +52,13 @@ export default function StoreFilter({
           <div className="gender-options">
             <div
               className="button gender-button"
-              onClick={() => setCurrentList(mensShoes)}
+              onClick={() => handleGenderChange("male")}
             >
               <FontAwesomeIcon icon={faMars} />
             </div>
             <div
               className="button gender-button"
-              onClick={() => setCurrentList(womenShoes)}
+              onClick={() => handleGenderChange("female")}
             >
               {" "}
               <FontAwesomeIcon icon={faVenus} />

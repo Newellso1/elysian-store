@@ -7,7 +7,6 @@ export default function Store() {
   const [openStoreFilter, setOpenStoreFilter] = useState(false);
   const [currentList, setCurrentList] = useState(ProductList);
   const [colorFilter, setColorFilter] = useState(null);
-  const [sortByPrice, setSortByPrice] = useState(null);
 
   const openFilterStyle = {
     width: openStoreFilter ? "100vw" : "",
@@ -44,12 +43,10 @@ export default function Store() {
           ProductList={ProductList}
           colorFilter={colorFilter}
           setColorFilter={setColorFilter}
-          sortByPrice={sortByPrice}
-          setSortByPrice={setSortByPrice}
         />
       </div>
       <div className="container">
-        {(colorFilter ? filteredShoes : currentList).map((product, index) => (
+        {currentList.map((product, index) => (
           <Product
             key={index}
             productName={product.name}
@@ -63,16 +60,4 @@ export default function Store() {
       </div>
     </div>
   );
-}
-
-{
-  /* <Product
-            key={index}
-            productName={product.name}
-            color={product.color}
-            productPrice={product.price}
-            image={product.image}
-            gender={product.gender}
-            popularity={product.popularity}
-          /> */
 }

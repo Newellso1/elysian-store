@@ -15,12 +15,24 @@ export default function StoreFilter({
   mensShoes,
   womenShoes,
   ProductList,
+  colorFilter,
+  setColorFilter,
+  sortByPrice,
+  setSortByPrice,
 }) {
   const hideButton = {
     animation: openStoreFilter ? "" : "hide-button 50ms",
   };
 
-  const handleReset = () => setCurrentList(ProductList);
+  const handleReset = () => {
+    setCurrentList(ProductList);
+    setColorFilter(null);
+    setSortByPrice(null);
+  };
+
+  const handleColorChange = (color) => setColorFilter(color);
+
+  const handlePriceChange = (price) => setSortByPrice(price);
 
   return (
     <div className="store-filter">
@@ -52,22 +64,56 @@ export default function StoreFilter({
             </div>
           </div>
           <div className="color-options">
-            <div id="Black" className="button color-button"></div>
-            <div id="White" className="button color-button"></div>
-            <div id="Red" className="button color-button"></div>
-            <div id="Pink" className="button color-button"></div>
-            <div id="Green" className="button color-button"></div>
-            <div id="Blue" className="button color-button"></div>
-            <div id="Yellow" className="button color-button"></div>
+            <div
+              id="Black"
+              className="button color-button"
+              onClick={() => handleColorChange("black")}
+            ></div>
+            <div
+              id="White"
+              className="button color-button"
+              onClick={() => handleColorChange("white")}
+            ></div>
+            <div
+              id="Red"
+              className="button color-button"
+              onClick={() => handleColorChange("red")}
+            ></div>
+            <div
+              id="Pink"
+              className="button color-button"
+              onClick={() => handleColorChange("pink")}
+            ></div>
+            <div
+              id="Green"
+              className="button color-button"
+              onClick={() => handleColorChange("green")}
+            ></div>
+            <div
+              id="Blue"
+              className="button color-button"
+              onClick={() => handleColorChange("blue")}
+            ></div>
+            <div
+              id="Yellow"
+              className="button color-button"
+              onClick={() => handleColorChange("yellow")}
+            ></div>
           </div>
           <div className="sort-options">
-            <div className="button sort-button">
+            <div
+              className="button sort-button"
+              onClick={() => handlePriceChange("high")}
+            >
               <FontAwesomeIcon
                 icon={faArrowUpWideShort}
                 className="sort-icon"
               />
             </div>
-            <div className="button sort-button">
+            <div
+              className="button sort-button"
+              onClick={() => handlePriceChange("low")}
+            >
               <FontAwesomeIcon
                 icon={faArrowDownShortWide}
                 className="sort-icon"

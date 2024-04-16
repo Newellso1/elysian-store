@@ -96,6 +96,14 @@
     "popularity": 3
   },
   {
+    "name": "Enigma",
+    "color": "green",
+    "price": 32,
+    "image": "Mens_Shoes/Green/MensGreen1.jpg",
+    "gender": "male",
+    "popularity": 10
+  },
+  {
     "name": "Ultramarine",
     "color": "blue",
     "price": 50,
@@ -150,6 +158,14 @@
     "image": "Mens_Shoes/Black/MensBlack1.jpg",
     "gender": "male",
     "popularity": 10
+  },
+  {
+    "name": "Azalea",
+    "color": "pink",
+    "price": 52,
+    "image": "Womens_Shoes/Pink/WomansPink2.jpg",
+    "gender": "female",
+    "popularity": 9
   },
   {
     "name": "Blanc",
@@ -222,5 +238,13 @@
     "image": "Womens_Shoes/White/WomansWhite1.jpg",
     "gender": "female",
     "popularity": 7
+  },
+  {
+    "name": "Stride",
+    "color": "blue",
+    "price": 36,
+    "image": "Mens_Shoes/Blue/MensBlue2.jpg",
+    "gender": "male",
+    "popularity": 9
   }
 ]

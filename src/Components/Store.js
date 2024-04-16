@@ -10,6 +10,8 @@ export default function Store() {
   const openFilterStyle = {
     width: openStoreFilter ? "100vw" : "",
     marginLeft: openStoreFilter ? "0" : "",
+    borderRadius: openStoreFilter ? "0 " : "",
+
     // top: openStoreFilter ? "6.4em" : "",
   };
 

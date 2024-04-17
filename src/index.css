@@ -581,3 +581,72 @@ code {
 .sort-icon {
   font-size: 0.9em;
 }
+
+.favourite-tab {
+  display: flex;
+  /* background-color: var(--primary-background-color); */
+  position: fixed;
+  height: 100vh;
+  z-index: 201;
+  top: 6.5em;
+  left: -23em;
+  transition: left 500ms ease-in-out;
+}
+
+.favourite-tab-open {
+  left: 0em;
+}
+
+.favourite-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--primary-background-color);
+  width: 20em;
+  padding: 1em;
+}
+
+.favourite-list > .favourite-top > h3 {
+  font-family: Yrsa;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+.favourite-close {
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favourite-close > div:nth-child(1) {
+  position: absolute;
+  height: 0.25em;
+  width: 1.25em;
+  rotate: 45deg;
+  border-radius: 0.25em;
+  background-color: var(--primary-text-color);
+  transition: transform 300ms ease, opacity 400ms ease;
+}
+
+.favourite-close > div:nth-child(2) {
+  position: absolute;
+  height: 0.25em;
+  width: 1.25em;
+  rotate: -45deg;
+  border-radius: 0.25em;
+  background-color: var(--primary-text-color);
+  transition: transform 200ms ease, opacity 400ms ease;
+}
+
+.rotate-left {
+  transform: rotate(-45deg);
+  opacity: 0;
+}
+
+.rotate-right {
+  transform: rotate(45deg);
+  opacity: 0;
+}

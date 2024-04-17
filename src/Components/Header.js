@@ -6,7 +6,7 @@ import {
   faBasketShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Header() {
+export default function Header({ handleOpenFavourites }) {
   return (
     <div className="header">
       <div className="header-left">
@@ -27,7 +27,7 @@ export default function Header() {
           <li>
             <FontAwesomeIcon icon={faLocationDot} />
           </li>
-          <li>
+          <li onClick={handleOpenFavourites}>
             <FontAwesomeIcon icon={faHeart} />
           </li>
           <li>

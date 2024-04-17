@@ -6,6 +6,7 @@ import {
   faArrowUpWideShort,
   faArrowDownShortWide,
   faTrashCan,
+  faMarsAndVenus,
 } from "@fortawesome/free-solid-svg-icons";
 export default function StoreFilter({
   openStoreFilter,
@@ -50,6 +51,12 @@ export default function StoreFilter({
       {openStoreFilter && (
         <div className="filter-options">
           <div className="gender-options">
+            <div
+              className="button gender-button"
+              onClick={() => handleGenderChange(null)}
+            >
+              <FontAwesomeIcon icon={faMarsAndVenus} />
+            </div>
             <div
               className="button gender-button"
               onClick={() => handleGenderChange("male")}

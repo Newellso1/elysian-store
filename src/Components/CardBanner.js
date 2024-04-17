@@ -22,7 +22,7 @@ export default function CardBanner() {
           <Card
             image={Promo1}
             icon={faPersonRunning}
-            promoText="Play Excel Preform"
+            promoText="Play Excel Perform"
             promoLink="Running"
           />
           <Card

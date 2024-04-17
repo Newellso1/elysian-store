@@ -379,6 +379,10 @@ code {
   border-radius: 1em;
 }
 
+.gender-button:nth-child(1) {
+  padding-left: 0.4em;
+}
+
 .color-options {
   display: flex;
   align-items: center;

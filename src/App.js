@@ -11,6 +11,31 @@ import Favourites from "./Components/Favourites";
 function App() {
   const [hidePromo, setHidePromo] = useState(true);
   const [openFavourites, setOpenFavourites] = useState(false);
+  const [favouriteList, setFavouriteList] = useState([]);
+
+  // const onAddToFavourites = (product) => {
+  //   const newFavouriteList = [...favouriteList, product];
+  //   setFavouriteList(newFavouriteList);
+  // };
+
+  const onAddToFavourites = (product) => {
+    const isAlreadyFavourited = favouriteList.some(
+      (favourite) => favourite.productName === product.productName
+    );
+
+    if (!isAlreadyFavourited) {
+      const newFavouriteList = [...favouriteList, product];
+      setFavouriteList(newFavouriteList);
+    }
+  };
+
+  const onDeleteFavourite = (removedProduct) => {
+    setFavouriteList((prevFavouriteList) =>
+      prevFavouriteList.filter(
+        (product) => product.productName !== removedProduct
+      )
+    );
+  };
 
   const handleOpenFavourites = () => setOpenFavourites(!openFavourites);
 
@@ -23,11 +48,14 @@ function App() {
         openFavourites={openFavourites}
         handleOpenFavourite={handleOpenFavourites}
         hidePromo={hidePromo}
+        favouriteList={favouriteList}
+        setFavouriteList={setFavouriteList}
+        onDeleteFavourite={onDeleteFavourite}
       />
       <Header handleOpenFavourites={handleOpenFavourites} />
       <Banner />
       <CardBanner />
-      <Store />
+      <Store onAddToFavourites={onAddToFavourites} />
     </div>
   );
 }

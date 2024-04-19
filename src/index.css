@@ -604,6 +604,19 @@ code {
   background-color: var(--primary-background-color);
   width: 20em;
   padding: 1em;
+  gap: 1em;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.favourite-list::-webkit-scrollbar {
+  display: none;
+}
+
+.favourite-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .favourite-list > .favourite-top > h3 {
@@ -649,4 +662,48 @@ code {
 .rotate-right {
   transform: rotate(45deg);
   opacity: 0;
+}
+
+.favourite-product {
+  background-color: white;
+  display: flex;
+  /* justify-content: space-between; */
+  border-radius: 0.5em;
+  animation: fadeIn 300ms backwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .favourite-product > * {
+  border: 1px solid;
+} */
+
+.favourite-product > img {
+  width: 7em;
+  border-radius: 0.5em 0 0 0.5em;
+  margin-right: 1em;
+}
+
+.favourite-product > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em 0;
+  text-align: left;
+  min-width: 4em;
+}
+
+.delete-button {
+  right: 1em;
+  margin: 1em;
+  cursor: pointer;
+  position: relative;
+  left: 3em;
 }

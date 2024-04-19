@@ -1,7 +1,10 @@
+import FavouriteProduct from "./FavouriteProduct";
+
 export default function Favourites({
   openFavourites,
   handleOpenFavourite,
-  hidePromo,
+  favouriteList,
+  onDeleteFavourite,
 }) {
   return (
     <div
@@ -12,6 +15,17 @@ export default function Favourites({
       <div className="favourite-list">
         <div className="favourite-top">
           <h3>my list</h3>
+        </div>
+        <div className="favourite-items">
+          {favouriteList.map((product, index) => (
+            <FavouriteProduct
+              key={index}
+              image={product.image}
+              productName={product.productName}
+              productPrice={product.productPrice}
+              onDeleteFavourite={onDeleteFavourite}
+            />
+          ))}
         </div>
       </div>
       <div className="favourite-close" onClick={handleOpenFavourite}>

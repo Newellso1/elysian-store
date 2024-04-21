@@ -7,6 +7,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import CardBanner from "./Components/CardBanner";
 import Store from "./Components/Store";
 import Favourites from "./Components/Favourites";
+import ShoppingCart from "./Components/ShoppingCart";
 
 function App() {
   const [hidePromo, setHidePromo] = useState(true);
@@ -52,6 +53,7 @@ function App() {
         setFavouriteList={setFavouriteList}
         onDeleteFavourite={onDeleteFavourite}
       />
+      <ShoppingCart />
       <Header handleOpenFavourites={handleOpenFavourites} />
       <Banner />
       <CardBanner />

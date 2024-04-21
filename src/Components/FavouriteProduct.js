@@ -17,11 +17,9 @@ export default function FavouriteProduct({
         <p>{productName}</p>
         <p>${productPrice}</p>
       </div>
-      <FontAwesomeIcon
-        icon={faTrash}
-        className="delete-button"
-        onClick={handleDelete}
-      />
+      <div className="delete-button">
+        <FontAwesomeIcon icon={faTrash} onClick={handleDelete} />
+      </div>
     </div>
   );
 }

@@ -13,6 +13,7 @@ function App() {
   const [hidePromo, setHidePromo] = useState(true);
   const [openFavourites, setOpenFavourites] = useState(false);
   const [favouriteList, setFavouriteList] = useState([]);
+  const [openCart, setOpenCart] = useState(false);
 
   // const onAddToFavourites = (product) => {
   //   const newFavouriteList = [...favouriteList, product];
@@ -39,6 +40,7 @@ function App() {
   };
 
   const handleOpenFavourites = () => setOpenFavourites(!openFavourites);
+  const handleOpenCart = () => setOpenCart(!openCart);
 
   return (
     <div className="App">
@@ -53,8 +55,11 @@ function App() {
         setFavouriteList={setFavouriteList}
         onDeleteFavourite={onDeleteFavourite}
       />
-      <ShoppingCart />
-      <Header handleOpenFavourites={handleOpenFavourites} />
+      <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} />
+      <Header
+        handleOpenFavourites={handleOpenFavourites}
+        handleOpenCart={handleOpenCart}
+      />
       <Banner />
       <CardBanner />
       <Store onAddToFavourites={onAddToFavourites} />

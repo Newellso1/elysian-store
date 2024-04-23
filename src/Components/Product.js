@@ -5,9 +5,18 @@ export default function Product({
   productPrice = "0",
   image = "Mens_Shoes/Black/MensBlack1.jpg",
   onAddToFavourites,
+  onAddToCart,
 }) {
   const handleAddToFavourites = (product) => {
     onAddToFavourites({
+      image: image,
+      productName: productName,
+      productPrice: productPrice,
+    });
+  };
+
+  const handleAddToCart = (product) => {
+    onAddToCart({
       image: image,
       productName: productName,
       productPrice: productPrice,
@@ -29,7 +38,11 @@ export default function Product({
           className="product-buttons"
           onClick={handleAddToFavourites}
         />
-        <FontAwesomeIcon icon={faPlusCircle} className="product-buttons" />
+        <FontAwesomeIcon
+          icon={faPlusCircle}
+          className="product-buttons"
+          onClick={handleAddToCart}
+        />
       </div>
     </div>
   );

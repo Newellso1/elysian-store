@@ -14,11 +14,7 @@ function App() {
   const [openFavourites, setOpenFavourites] = useState(false);
   const [favouriteList, setFavouriteList] = useState([]);
   const [openCart, setOpenCart] = useState(false);
-
-  // const onAddToFavourites = (product) => {
-  //   const newFavouriteList = [...favouriteList, product];
-  //   setFavouriteList(newFavouriteList);
-  // };
+  const [cartItems, setCartItems] = useState([]);
 
   const onAddToFavourites = (product) => {
     const isAlreadyFavourited = favouriteList.some(
@@ -42,6 +38,23 @@ function App() {
   const handleOpenFavourites = () => setOpenFavourites(!openFavourites);
   const handleOpenCart = () => setOpenCart(!openCart);
 
+  const onAddToCart = (product) => {
+    const isAlreadyAdded = cartItems.some(
+      (cartItem) => cartItem.productName === product.productName
+    );
+
+    if (!isAlreadyAdded) {
+      const newCartList = [...cartItems, product];
+      setCartItems(newCartList);
+    }
+  };
+
+  const onDeleteCartItem = (removedProduct) => {
+    setCartItems((prevCartItems) =>
+      prevCartItems.filter((product) => product.productName !== removedProduct)
+    );
+  };
+
   return (
     <div className="App">
       {hidePromo && (
@@ -50,19 +63,22 @@ function App() {
       <Favourites
         openFavourites={openFavourites}
         handleOpenFavourite={handleOpenFavourites}
-        hidePromo={hidePromo}
         favouriteList={favouriteList}
-        setFavouriteList={setFavouriteList}
         onDeleteFavourite={onDeleteFavourite}
       />
-      <ShoppingCart openCart={openCart} setOpenCart={setOpenCart} />
+      <ShoppingCart
+        openCart={openCart}
+        setOpenCart={setOpenCart}
+        cartItems={cartItems}
+        onDeleteCartItem={onDeleteCartItem}
+      />
       <Header
         handleOpenFavourites={handleOpenFavourites}
         handleOpenCart={handleOpenCart}
       />
       <Banner />
       <CardBanner />
-      <Store onAddToFavourites={onAddToFavourites} />
+      <Store onAddToFavourites={onAddToFavourites} onAddToCart={onAddToCart} />
     </div>
   );
 }

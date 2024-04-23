@@ -721,12 +721,20 @@ code {
   background-color: var(--primary-background-color);
   position: fixed;
   padding: 1em;
+  gap: 1em;
   height: 90vh;
   max-height: 90vh;
   z-index: 201;
   top: 6.5em;
   right: -20em;
   transition: right 500ms ease-in-out;
+}
+
+.shopping-cart h3 {
+  font-family: Yrsa;
+  text-transform: lowercase;
+  font-size: 1.25em;
+  font-weight: 400;
 }
 
 .shopping-cart-open {
@@ -750,6 +758,14 @@ code {
 
 .cart-items {
   flex-grow: 1;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.cart-items::-webkit-scrollbar {
+  display: none;
 }
 
 .cart-checkout {
@@ -758,7 +774,7 @@ code {
   gap: 1em;
   width: 100%;
   height: 10em;
-  border: 1px solid;
+
   padding: 1em;
 }
 
@@ -786,7 +802,7 @@ code {
   color: var(--bold-font-color);
   background-color: transparent;
   border: none;
-  border: 2px solid;
+  border: 0.13em solid;
   padding: 0.15em 0.25em;
   border-radius: 0.25em;
   font: inherit;

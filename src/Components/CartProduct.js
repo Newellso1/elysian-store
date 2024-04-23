@@ -5,7 +5,12 @@ export default function CartProduct({
   productName = "Product Name",
   productPrice = "0",
   image = "Mens_Shoes/Black/MensBlack1.jpg",
+  onDeleteCartItem,
 }) {
+  const handleDelete = () => {
+    onDeleteCartItem(productName);
+  };
+
   return (
     <div className="favourite-product">
       <img src={require(`../Assets/Images/${image}`)} alt={productName} />
@@ -13,8 +18,8 @@ export default function CartProduct({
         <p>{productName}</p>
         <p>${productPrice}</p>
       </div>
-      <div>
-        <FontAwesomeIcon icon={faTrash} />
+      <div className="delete-button">
+        <FontAwesomeIcon icon={faTrash} onClick={handleDelete} />
       </div>
     </div>
   );

@@ -78,7 +78,12 @@ function App() {
       />
       <Banner />
       <CardBanner />
-      <Store onAddToFavourites={onAddToFavourites} onAddToCart={onAddToCart} />
+      <Store
+        onAddToFavourites={onAddToFavourites}
+        onAddToCart={onAddToCart}
+        favouriteList={favouriteList}
+        onDeleteFavourite={onDeleteFavourite}
+      />
     </div>
   );
 }

@@ -286,9 +286,18 @@ code {
   margin: 0.25em;
 }
 
+.product-button {
+  transition: color 200ms ease;
+  cursor: pointer;
+}
+
 .product-buttons:hover {
   color: var(--primary-text-color);
   cursor: pointer;
+}
+
+.product-favourited {
+  color: rgb(223, 40, 40);
 }
 
 .filter-container {

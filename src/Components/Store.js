@@ -3,7 +3,12 @@ import ProductList from "../Components/ProductList.json";
 import StoreFilter from "./StoreFilter";
 import { useState } from "react";
 
-export default function Store({ onAddToFavourites, onAddToCart }) {
+export default function Store({
+  onAddToFavourites,
+  onAddToCart,
+  favouriteList,
+  onDeleteFavourite,
+}) {
   const [openStoreFilter, setOpenStoreFilter] = useState(false);
   const [currentList, setCurrentList] = useState(ProductList);
   const [genderFilter, setGenderFilter] = useState(null);
@@ -69,6 +74,8 @@ export default function Store({ onAddToFavourites, onAddToCart }) {
               popularity={product.popularity}
               onAddToFavourites={onAddToFavourites}
               onAddToCart={onAddToCart}
+              favouriteList={favouriteList}
+              onDeleteFavourite={onDeleteFavourite}
             />
           ))
         )}

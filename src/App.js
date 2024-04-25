@@ -83,6 +83,8 @@ function App() {
         onAddToCart={onAddToCart}
         favouriteList={favouriteList}
         onDeleteFavourite={onDeleteFavourite}
+        cartItems={cartItems}
+        onDeleteCartItem={onDeleteCartItem}
       />
     </div>
   );

@@ -8,6 +8,8 @@ export default function Store({
   onAddToCart,
   favouriteList,
   onDeleteFavourite,
+  cartItems,
+  onDeleteCartItem,
 }) {
   const [openStoreFilter, setOpenStoreFilter] = useState(false);
   const [currentList, setCurrentList] = useState(ProductList);
@@ -76,6 +78,8 @@ export default function Store({
               onAddToCart={onAddToCart}
               favouriteList={favouriteList}
               onDeleteFavourite={onDeleteFavourite}
+              cartItems={cartItems}
+              onDeleteCartItem={onDeleteCartItem}
             />
           ))
         )}

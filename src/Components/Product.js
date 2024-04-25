@@ -1,5 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faPlusCircle,
+  faMinusCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Product({
   productName = "Product Name",
@@ -9,18 +13,16 @@ export default function Product({
   onAddToCart,
   favouriteList,
   onDeleteFavourite,
+  cartItems,
+  onDeleteCartItem,
 }) {
   const isFavourited = favouriteList.some(
     (product) => product.productName === productName
   );
 
-  // const handleAddToFavourites = () => {
-  //   onAddToFavourites({
-  //     image: image,
-  //     productName: productName,
-  //     productPrice: productPrice,
-  //   });
-  // };
+  const isInBasket = cartItems.some(
+    (product) => product.productName === productName
+  );
 
   const handleAddToFavourites = () => {
     !isFavourited
@@ -33,11 +35,13 @@ export default function Product({
   };
 
   const handleAddToCart = () => {
-    onAddToCart({
-      image: image,
-      productName: productName,
-      productPrice: productPrice,
-    });
+    !isInBasket
+      ? onAddToCart({
+          image: image,
+          productName: productName,
+          productPrice: productPrice,
+        })
+      : onDeleteCartItem(productName);
   };
 
   return (
@@ -61,7 +65,7 @@ export default function Product({
           // style={{ color: isFavourited ? "black" : "blue" }}
         />
         <FontAwesomeIcon
-          icon={faPlusCircle}
+          icon={isInBasket ? faMinusCircle : faPlusCircle}
           className="product-buttons"
           onClick={handleAddToCart}
         />

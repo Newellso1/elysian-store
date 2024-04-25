@@ -5,8 +5,14 @@ import {
   faHeart,
   faBasketShopping,
 } from "@fortawesome/free-solid-svg-icons";
+import ListCounter from "./ListCounter";
 
-export default function Header({ handleOpenFavourites, handleOpenCart }) {
+export default function Header({
+  handleOpenFavourites,
+  handleOpenCart,
+  cartItems,
+  favouriteList,
+}) {
   return (
     <div className="header">
       <div className="header-left">
@@ -29,9 +35,15 @@ export default function Header({ handleOpenFavourites, handleOpenCart }) {
           </li>
           <li onClick={handleOpenFavourites}>
             <FontAwesomeIcon icon={faHeart} />
+            {favouriteList.length > 0 ? (
+              <ListCounter list={favouriteList} />
+            ) : (
+              ""
+            )}
           </li>
           <li>
             <FontAwesomeIcon onClick={handleOpenCart} icon={faBasketShopping} />
+            {cartItems.length > 0 ? <ListCounter list={cartItems} /> : ""}
           </li>
         </ul>
       </div>

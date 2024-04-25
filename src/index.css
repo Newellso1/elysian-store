@@ -100,6 +100,22 @@ code {
 
 .header li {
   cursor: pointer;
+  max-width: 1.5em;
+  position: relative;
+}
+
+.list-counter {
+  background-color: rgb(223, 40, 40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5em;
+  position: absolute;
+  top: -0.5em;
+  right: -1em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 0.75em;
 }
 
 .parallax-banner {

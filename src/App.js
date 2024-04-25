@@ -75,6 +75,8 @@ function App() {
       <Header
         handleOpenFavourites={handleOpenFavourites}
         handleOpenCart={handleOpenCart}
+        cartItems={cartItems}
+        favouriteList={favouriteList}
       />
       <Banner />
       <CardBanner />

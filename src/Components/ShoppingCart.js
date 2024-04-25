@@ -1,3 +1,4 @@
+import { useState } from "react";
 import CartProduct from "./CartProduct";
 
 export default function ShoppingCart({
@@ -6,9 +7,23 @@ export default function ShoppingCart({
   cartItems,
   onDeleteCartItem,
 }) {
+  const [discountCode, setDiscountCode] = useState("");
+  const [discountApplied, setDiscountApplied] = useState(false);
+
+  // const totalPrice = () => {
+  //   const sum = cartItems.reduce((prev, next) => prev + next.productPrice, 0);
+  //   return sum.toFixed(2);
+  // };
+
   const totalPrice = () => {
     const sum = cartItems.reduce((prev, next) => prev + next.productPrice, 0);
-    return sum.toFixed(2);
+    if (!discountApplied) {
+      return "$" + sum.toFixed(2);
+    } else if (discountCode === "welcome" && discountApplied) {
+      return "$" + (sum * 0.9).toFixed(2);
+    } else {
+      return "code not valid";
+    }
   };
 
   return (
@@ -34,13 +49,20 @@ export default function ShoppingCart({
       <div className="cart-checkout">
         <div>
           <h3>Total price</h3>
-          <span>${totalPrice()}</span>
+          <span>{totalPrice()}</span>
         </div>
         <div>
           <h3>Discount code</h3>
           <div>
-            <input type="text" />
-            <button>Apply</button>
+            <input
+              name="discount code"
+              id="discount"
+              type="text"
+              onChange={(e) => setDiscountCode(e.target.value.toLowerCase())}
+            />
+            <button onClick={() => setDiscountApplied(!discountApplied)}>
+              {discountApplied ? "Remove" : "Apply"}
+            </button>
           </div>
         </div>
         <div>
